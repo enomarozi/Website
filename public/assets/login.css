@@ -1,0 +1,83 @@
+.head-login{
+	width:70%;
+	align-items: center;
+	margin-top: 5%;
+	margin-left: 15%;
+	margin-right: 15%;
+	text-align: center;
+}
+form{
+	width: 30%;
+	margin-right: 35%;
+	margin-left: 35%;
+	padding-top: 3%;
+	padding-bottom: 5%;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 2px rgba(1, 1, 1, 1), 0 0px 100px 0 rgba(0, 0, 0, 0.19);
+	background-color: #f2f2f2;
+	position:relative;
+	z-index:2;
+}
+.label{
+	margin-bottom: 5%;
+	font-size: 30px;
+	text-shadow: 1px 0px 3px;
+	text-align: center;
+	background: #e3e8e5;
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+input{
+	width: 80%;
+	margin-top: 1%;
+	margin-left: 10%;
+	margin-right: 10%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	border-style: none;
+	background-color: #e3e8e5;
+	border-bottom: 1px solid black;
+	font-size: 20px;
+    box-sizing:border-box;
+	-moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+}
+input[type='submit']{
+	margin-top: 3%;
+	font-size: 20px;
+	border-radius: 5px;
+	border-style: none;
+	font-weight: 600;
+	color: white;
+	background-color: #2a3a75;
+}
+input[type='submit']:hover{
+	cursor: pointer;
+}
+.register{
+	font-size: 15px;
+	margin-top: 5%;
+	margin-left: 10%;
+}
+.footer{
+ 	position: fixed;
+ 	background-color: black;
+ 	text-align: center;
+ 	height: 30%;
+ 	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	z-index: 1;
+}
+hr{
+	opacity: 0.1;
+}
+.copyright{
+	color: white;
+	position:fixed;
+	bottom:2px;
+	width:100%;
+}
+.button-regis:visited,.button-regis:active{
+	color: #2a3a75;
+}
