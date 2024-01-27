@@ -222,7 +222,6 @@ class CariPropertyIndonesia extends Controller
                 array_push($foto,$i);
             }
         }
-        echo 123;
         #dd($data[0]['id_user']);
         return view('details_profile',['data'=>$data,'foto'=>$foto]);
     }
