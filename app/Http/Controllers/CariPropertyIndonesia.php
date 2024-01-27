@@ -8,6 +8,7 @@ use App\Models\{Users,Medias,penjualan,kostan};
 use Illuminate\Support\Facades\Auth;
 use Session;
 use DB;
+use DataTables;
 
 class CariPropertyIndonesia extends Controller
 {
@@ -221,6 +222,7 @@ class CariPropertyIndonesia extends Controller
                 array_push($foto,$i);
             }
         }
+        echo 123;
         #dd($data[0]['id_user']);
         return view('details_profile',['data'=>$data,'foto'=>$foto]);
     }
@@ -359,5 +361,13 @@ class CariPropertyIndonesia extends Controller
             }
         }
         return view('details',['data'=>$data,'foto'=>$foto]);
+    }
+
+    /////////AJAX/////////
+    public function index(Request $request){
+        if($request->ajax()){
+            $data = penjualan::latest()->get();
+            dd($data);
+        }
     }
 }

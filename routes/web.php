@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Account;
 use App\Http\Controllers\CariPropertyIndonesia;
 
-
 Route::GET('/dashboard',[Account::class,'dashboard'])->name('dashboard');
 
 Route::GET('/',[Account::class,'login'])->name('login');
