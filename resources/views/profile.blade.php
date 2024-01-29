@@ -7,6 +7,9 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+
+
 </head>
 <body>
 @extends('template')
@@ -80,45 +83,80 @@
 					<a href='/inputTanah'><button class='input'>Property Tanah</button><a>
 				<hr>
 			</div>
-			<table id="data" border=1>
-				<thead>
-				<tr>
-					<td>No</td>
-					<td>Kategori</td>
-					<td>Foto</td>
-					<td>Tipe</td>
-					<td>Daerah</td>
-					<td>Luas Tanah</td>
-					<td>Luas Bangun</td>
-					<td>Harga</td>
-					<td>Action</td>
-				</tr>
-				</thead>
-				@foreach($penjualan as $j=>$index)
-				<tr> 
-					<td>{{$j+1}}</td>
-					<td style="text-transform: uppercase;">{{$index->kategori}}</td>
-					<td><img class='image-list' src="{{ asset('public/profile/'.Session::get('id').'/penjualan/'.$index->frumah)}}" width="250px"></td>
-					<td>{{$index->properti}} {{$index->tipe}}</td>
-					<td>{{$index->kecamatan}}, {{$index->kelurahan}}</td>
-					<td>{{$index->luas_tanah}} M&#178;</td>
-					<td>{{$index->luas_bangun}} M&#178;</td>
-					<td>{{$index->harga}}</td>
-					<td>
-						<div class='grid-action'>
-							<a href="/profile/{{$i->username}}/details/{{$index->properti}}/{{$index->id}}"><button class='action-edit-button' style='background-color: blue;'>Details</button></a>
-							<a href="/profile/{{$i->username}}/edit/{{$index->properti}}/{{$index->id}}"><button class='action-edit-button' style='background-color: orange;'>Edit</button></a>
-							<a href="/profile/{{$i->username}}/edit/{{$index->properti}}/{{$index->id}}"><button class='action-edit-button' style='background-color: red;'>Delete</button></a>
-						</div>
-					</td>
-				</tr>
-				@endforeach
+			
+			<table id="dataTable" class="table table-bordered data-table">
+			    <thead>
+			        <tr>
+			            <th>No</th>
+			            <th>Kategori</th>
+			            <th>Foto</th>
+			            <th>Tipe</th>
+			            <th>Daerah</th>
+			            <th>Luas Tanah</th>
+			            <th>Luas Bangun</th>
+			            <th>Harga</th>
+			            <th>Action</th>
+			            <!-- Tambahkan kolom lain sesuai kebutuhan -->
+			        </tr>
+			    </thead>
+			    <tbody>
+			        <!-- Isi tabel menggunakan data dari response JSON -->
+			    </tbody>
 			</table>
+			<script type="text/javascript">
+			  $(function () {
+			      
+			    var table = $('.data-table').DataTable({
+			        processing: true,
+			        serverSide: true,
+			        ajax: "{{ route('getData') }}",
+			        columns: [
+			            {data: 'id', name: 'id'},
+			            {data: 'kategori', name: 'kategori'},
+				          {	
+				          	data: 'frumah',
+				            orderable: false,
+				            searchable: false,
+				            render: function(data, type, row) 
+				            {
+				                // return '<img src="' + data.frumah + '" alt="Image" class="img-thumbnail" width="50" height="50">';
+				                return '<img class="image-list" src="{{ asset('public/profile/'.Session::get('id').'/penjualan/') }}/' + data + '" width="250px">';
+				            }
+				          },
+			            {data: 'tipe', name: 'tipe'},
+			            {data: 'kecamatan', name: 'kecamatan'},
+			            {data: 'luas_tanah', name: 'luas_tanah'},
+			            {data: 'luas_bangun', name: 'luas_bangun'},
+			            {data: 'harga', name: 'harga'},
+			            { 
+			                data: null,
+			                orderable: false,
+			                searchable: false,
+			                render: function(data, type, row) {
+			                    return '<div class="action-button">'+
+			                    			 '<a href="/profile/{{$i->username}}/details/'+data.properti+'/'+data.id + '"class="detail">Detail</a>' +
+			                    			 '<a href="/profile/{{$i->username}}/edit/'+data.properti+'/'+ data.id + '" class="edit">Edit</a>' +
+			                           '<a href="/update/' + data.id + '" class="delete">Update</a>'+
+			                           '</div>';
+			                }
+			            }
+			        ]
+			    });
+			      
+			  });
+			</script>
 		</div>
 	</div>
 </div>
 
 @endforeach
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.js"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap5.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $('#data').after('<div id="nav"></div>');

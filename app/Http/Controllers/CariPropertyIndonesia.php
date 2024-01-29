@@ -8,7 +8,7 @@ use App\Models\{Users,Medias,penjualan,kostan};
 use Illuminate\Support\Facades\Auth;
 use Session;
 use DB;
-use DataTables;
+use Yajra\DataTables\DataTables;
 
 class CariPropertyIndonesia extends Controller
 {
@@ -304,12 +304,15 @@ class CariPropertyIndonesia extends Controller
         return redirect()->route('profile', ['username' => Session::get('username')]);
         
     }
+    public function getData(){
+        $penjualan = penjualan::where('user',Session::get('username'))->get(); 
+        return Datatables::of($penjualan)->make(true);
+    }
     public function profile($username){
     	$data = Users::where('username',Session::get('username'))->get();
         $medias = Medias::where('username',Session::get('username'))->first();
-        $penjualan = penjualan::where('user',Session::get('username'))->get(); 
 
-    	return view('profile',['data'=>$data,'penjualan'=>$penjualan,'medias'=>$medias]);
+    	return view('profile',['data'=>$data,'medias'=>$medias]);
     }
     public function search(Request $request){
         if($request->kelurahan == "Semua" || $request->kecamatan == "Semua")

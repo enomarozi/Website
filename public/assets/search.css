@@ -3,7 +3,6 @@
 	display: grid;
 	grid-template-columns: 26% 26% 26%;
 	padding-top: 1%;
-	background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(203,203,203,1) 50%, rgba(255,255,255,1) 100%);
 }
 .kategori{
 	padding-top: 1%;

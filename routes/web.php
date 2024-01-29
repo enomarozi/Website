@@ -33,3 +33,4 @@ Route::GET('/search/{kategori}/{properti}',[CariPropertyIndonesia::class,'search
 Route::GET('/searchKost',[CariPropertyIndonesia::class,'searchKost'])->name('searchKost');
 Route::GET('/details/{id}',[CariPropertyIndonesia::class,'details'])->name('details');	
 
+Route::GET('/getData', [CariPropertyIndonesia::class, 'getData'])->name('getData');
