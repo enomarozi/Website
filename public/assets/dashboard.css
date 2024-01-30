@@ -83,3 +83,30 @@ hr{
 	bottom:2px;
 	width:100%;
 }
+@media screen and (max-height: 900px){
+	form{
+		margin-top: 25%;
+		width: 95%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+	.select-1 select,
+	.select-1 option,
+	.select-2 select,
+	.select-2 option{
+		font-size: 12px;
+		height: 40px;
+	}
+	.button-search{
+		font-size: 8px;
+		height: 40px;
+	}
+	.hubungi{
+		margin-top: 5%;
+	}
+	.grid-medsos{
+		margin-top: 5%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}

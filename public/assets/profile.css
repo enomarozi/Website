@@ -147,5 +147,42 @@ a:hover,a:visited{
 .grid-action{
 	display: grid;
 	grid-template-rows: auto auto auto;
-
+}
+@media screen and (max-height: 900px){
+	.container-parent{
+		width: 100%;
+		display: block;
+		margin:0%;
+		text-align: center;
+	}
+	h2{
+		width: 100%;
+		text-align: center;
+	}
+	.container-child{
+		display: block;
+		margin-left: 0%;
+	}
+	.profile{
+		width: 100%;
+	}
+	.grid-column{
+		grid-template-columns: 40% 5% 55%;
+	}
+	.table-data{
+		margin-left: 1%;
+		margin-right: 1%;
+	}
+	.button-fungsi{
+		margin:0px;
+		margin-top: 5%;
+		width: 100%;
+		text-align: center;
+	}
+	.input{
+		padding:3%;
+	}
+	#DataTables_Table_0_wrapper{
+		display: none;
+	}
 }

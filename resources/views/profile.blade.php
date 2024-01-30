@@ -83,8 +83,36 @@
 					<a href='/inputTanah'><button class='input'>Property Tanah</button><a>
 				<hr>
 			</div>
-			
-			<table id="dataTable" class="table table-bordered data-table">
+			@foreach($penjualan as $i)
+			<div class='tampil'>
+				<p class='kategori'>{{$i->kategori}}</p>
+				<img class='image-list' src="{{ asset('public/profile/'.$i->id_user.'/penjualan/'.$i->frumah)}}" width="450px">
+				<div class='mid-panel-columns'>
+					<div class='mid-panel-rows panel-left'>
+						<p class='alamat'>{{$i->kecamatan}}, {{$i->kelurahan}}</p>
+						<p class='alamat-lengkap'>{{$i->alamat}}</p>
+					</div>
+					<div class='mid-panel-rows panel-right'>
+						@php
+						$hasil_rupiah = "Rp " . number_format($i->harga,0,',','.');
+						@endphp
+						<p class='harga'>{{$hasil_rupiah}}</p>
+						<p class='type'>{{$i->tipe}}</p>
+					</div>
+				</div>	
+				<hr>
+				<div class='tampil-grid-bottom'>
+					<div>
+						<p class='create'>{{$i->created_at}}</p>
+					</div>
+					<div class='tampil-grid-bottom-child'>
+						<button class='button-action'><a class='a_button' href="{{route('details',$i->id)}}">Beli</a></button>
+						<button class='button-action'><a class='a_button' href="{{route('details',$i->id)}}">Details</a></button>
+					</div>
+				</div>
+			</div>
+			@endforeach
+			<table class="table table-bordered data-table">
 			    <thead>
 			        <tr>
 			            <th>No</th>

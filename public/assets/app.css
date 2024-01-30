@@ -3,9 +3,6 @@
 	font-family: 'Lato', sans-serif;
 	text-decoration: none;
 }
-body{
-	background-color: #e3e8e5;
-}
 .head-img{
 	width: 40%;
 }
@@ -24,7 +21,7 @@ body{
 }
 .header-2{
 	display: grid;
-	grid-template-columns: 70% 30%;
+	grid-template-columns: 70% 0% 30%;
 	align-items: center;
 }
 .button-head{
@@ -43,4 +40,25 @@ body{
 }
 a:active,a:visited{
 	color: white;
+}
+@media screen and (max-height: 900px){
+	.grid-header{
+		grid-template-columns: 50% 0% 50%;
+	}
+	.head-img{
+		width: 80%;
+	}
+	.wa-img{
+		width: 80%;
+	}
+	.header-2{
+		grid-template-columns: 50% 20% 30%;
+	}
+	.button-head{
+		font-size: 8px;
+	}
+	button:hover,button:active,button:visited{
+		color: white;
+	}
+
 }

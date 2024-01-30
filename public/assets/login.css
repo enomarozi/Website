@@ -81,3 +81,28 @@ hr{
 .button-regis:visited,.button-regis:active{
 	color: #2a3a75;
 }
+@media screen and (max-height: 900px){
+	.head-login{
+		width: 80%;
+		margin: 25% 10% 3% 10%;
+	}
+	input{
+		font-size: 11px;
+	}
+	form{
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		border-radius: 5px;
+	}
+	.label{
+		font-size: 15px;
+	}
+	input[type='submit']{
+		border-radius: 2px;
+		font-size: 11px;
+	}
+	.register{
+		font-size: 8px;
+	}
+}

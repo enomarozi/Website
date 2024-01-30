@@ -85,11 +85,6 @@ input[type='submit']{
 }
 @media screen and (max-height: 900px){
 	.container{
-		width: 90%;
-		margin-left: 5%;
-		margin-right: 5%;
-	}
-	input{
-		margin-top: 5%;
+		width: 50%;
 	}
 }

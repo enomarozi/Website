@@ -311,8 +311,8 @@ class CariPropertyIndonesia extends Controller
     public function profile($username){
     	$data = Users::where('username',Session::get('username'))->get();
         $medias = Medias::where('username',Session::get('username'))->first();
-
-    	return view('profile',['data'=>$data,'medias'=>$medias]);
+        $penjualan = penjualan::where('user',Session::get('username'))->get(); 
+    	return view('profile',['data'=>$data,'medias'=>$medias,'penjualan'=>$penjualan]);
     }
     public function search(Request $request){
         if($request->kelurahan == "Semua" || $request->kecamatan == "Semua")

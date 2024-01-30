@@ -10,10 +10,11 @@
 	<div></div>
 	<div class='header-2  '>
 		<img class='wa-img' src="{{ asset('images/technical.png') }}">
+		<div></div>
 		@if(Route::current()->getName() === "login")
-			<button class='button-head'><a href="{{route('forgot_password')}}">Lupa Password</a></button>
+			<button class='button-head'><a href="{{route('forgot_password')}}" style="color:white;">Lupa Password</a></button>
 		@else
-			<button class='button-head'><a href="{{route('login')}}">Login</a></button>
+			<button class='button-head'><a href="{{route('login')}}" style="color:white;">Login</a></button>
 		@endif
 	</div>
 </header>

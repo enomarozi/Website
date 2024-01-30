@@ -15,7 +15,6 @@
 	<div class='grid-container'>
 		@if(count($search) >= 1)
 			@foreach($search as $i)
-
 			<div class='tampil'>
 				<p class='kategori'>{{$i->kategori}}</p>
 				<img class='image-list' src="{{ asset('public/profile/'.$i->id_user.'/penjualan/'.$i->frumah)}}" width="450px">
