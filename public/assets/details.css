@@ -1,0 +1,110 @@
+.label{
+	margin-top: 1%;
+	margin-bottom: 1%;
+	margin-left: 20%;
+	font-size: 35px;
+	font-weight: 900;
+}
+.form-setting{
+	width: 100%;
+}
+.container{
+	width: 60%;
+	margin-left: 20%;
+	margin-right: 20%;
+	padding:1%;
+	background-color: white;
+	box-shadow: 0 4px 8px 2px rgba(1, 1, 1, 1), 0 0px 100px 0 rgba(0, 0, 0, 0.19);
+}
+.grid-details{
+	display: grid;
+	width: 100%;
+	grid-template-columns: 40% 60%;
+}
+.slideshow-container{
+	width: 100%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 38%;
+  margin-right: 55%;
+  padding: 16px;
+  color: white;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.details-property{
+	margin-left: 5%;
+	background-color: white;
+}
+.details{
+	font-size: 30px;
+}
+.sub{
+	font-weight: 600;
+}
+td{
+	font-size: 20px;
+	column-gap: 40px;
+}
+.split{
+	width: 30px;
+	text-align: center;
+}
+hr{
+	height: 2px;
+	background-color: black;
+}
+tr{
+	margin-top: 2%;
+}
+table{
+	border-collapse:separate; 
+	border-spacing: 0 7px;
+}
+.grid-label{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+}
+.label-posting{
+	font-size: 18px;
+	font-weight: normal;
+	text-align: right;
+}
+.profile-show{
+	padding: 3%;
+	background-color: #2a3a75;
+	color: white;
+	border-style: none;
+	font-size: 20px;
+}
+.profile-show:hover{
+	cursor: pointer;
+}

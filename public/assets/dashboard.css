@@ -1,0 +1,112 @@
+body{
+	background: url('/images/body.png') no-repeat center fixed !important;  
+	-webkit-background-size: cover !important;
+	-moz-background-size: cover !important;
+	-o-background-size: cover !important;
+	background-size: cover !important;  
+}
+.grid-header{
+	background: rgba(0, 0, 0, .5) !important;
+}
+form{
+	margin-top: 5%;
+	display: grid;
+	width: 50%;
+	margin-left:25%;
+	margin-right:25%;
+	grid-template-columns: 90% 10%;
+}
+.grid-select{
+	display: grid;
+	grid-template-columns: 49.9% 0.2% 49.9%;
+}
+.select-1 select,
+.select-1 option,
+.select-2 select,
+.select-2 option{
+	font-size: 16px;
+	font-family: 'Roboto';
+	width: 100%;
+	height: 50px;
+	background-color: #e3e8e5;
+	border-style: none;
+	outline: none;
+}
+.button-search{
+	width: 100%;
+	height: 50px;
+	border:none;
+	color: white;
+	background-color: #2a3a75;
+	border-bottom-right-radius: 50px;
+	border-top-right-radius: 50px;
+}
+.button-search:hover{
+	cursor: pointer;
+}
+.footer{
+ 	position: fixed;
+ 	background-color: black;
+ 	text-align: center;
+ 	height: 40%;
+ 	bottom: 0px;
+	left: 0px;
+	right: 0px;
+}
+.hubungi{
+	font-family: "Abel";
+	color: white;
+	margin-top: 0.5%;
+	text-align: center;
+}
+.grid-medsos{
+	display: grid;
+	margin-top: 1%;
+	margin-left: 40%;
+	margin-right: 40%;
+	grid-template-columns: 25% 25% 25% 25%;
+	justify-items: center;
+  	align-items: center;
+}
+.medos{
+	width: 45%;
+}
+.medos:hover{
+	cursor: pointer;
+}
+hr{
+	opacity: 0.1;
+}
+.copyright{
+	color: white;
+	position:fixed;
+	bottom:2px;
+	width:100%;
+}
+@media screen and (max-height: 900px){
+	form{
+		margin-top: 25%;
+		width: 95%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+	.select-1 select,
+	.select-1 option,
+	.select-2 select,
+	.select-2 option{
+		font-size: 12px;
+		height: 40px;
+	}
+	.button-search{
+		font-size: 8px;
+		height: 40px;
+	}
+	.hubungi{
+		margin-top: 5%;
+	}
+	.grid-medsos{
+		margin-top: 5%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}

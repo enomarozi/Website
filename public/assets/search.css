@@ -1,0 +1,95 @@
+.grid-container{
+	width: 100%;
+	display: grid;
+	grid-template-columns: 26% 26% 26%;
+	padding-top: 1%;
+}
+.kategori{
+	padding-top: 1%;
+	padding-bottom: 1%;
+	text-transform: uppercase;
+	font-size: 20px;
+}
+.tampil{
+	margin-left: 5%;
+	margin-bottom: 5%;
+	text-align: center;
+	border-radius: 5px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.image-list{
+	height: 320px;
+}
+.mid-panel-columns{
+	display: grid;
+	font-size: 20px;
+	grid-template-columns: 50% 50%;
+	margin-left:0px;
+	justify-items: center;
+  	align-items: center;
+
+}
+.mid-panel-rows{
+	display: grid;
+	grid-template-rows: 50% 50%;
+	justify-items: center;
+}
+.panel-left{
+	margin-left: 0;
+}
+.panel-right{
+	align-items: left;
+}
+.tampil-grid-bottom{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	align-items: center;
+	padding-bottom: 1%;
+	padding-top: 1%;
+}
+
+.tampil-grid-bottom-child{
+	display: grid;
+	grid-template-columns: 50% 50%;
+	justify-content: flex-end;
+	margin-right: 5%;
+}
+.button-action{
+	margin-left: 5px;
+}
+.kategori{
+	font-weight: bold;
+}
+.alamat,.alamat-lengkap{
+	font-size: 80%;
+}
+.harga{
+
+}
+.type{
+	font-size: 90%;
+	color: #8a8686;
+}
+.posting,.create{
+	font-size: 100%;
+	color: #8a8686;
+}
+button{
+	padding-top: 5%;
+	padding-bottom: 5%;
+	background-color: #2a3a75;
+	border-style: none;
+	font-size: 18px;
+}
+button:hover{
+	cursor: pointer;
+}
+a:link,a:visited,a:active {
+	color: black;
+	background-color: transparent;
+	text-decoration: none;
+}
+.a_button:link,.a_button:visited,.a_button:active{
+	color: white;
+}
