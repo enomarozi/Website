@@ -99,3 +99,45 @@ input[type='submit']:hover{
 footer{
 	height: 50px;
 }
+@media screen and (max-height: 900px){
+	.label{
+		margin: 10px 0 5px 0;
+		font-size: 25px;
+	}
+	form{
+		width: 100%;
+		margin:0;
+		font-size: 12px;
+	}
+	.grid-fprofil{
+		display: block;
+		margin-bottom: 0;
+
+	}
+	#f-profile{
+		width: 100%;
+		margin-top:0;
+	}
+	input[type='file']{
+		margin-top: 0;
+	}
+	.label-parrent{
+		margin:5% 0 5% 2.5%;
+	}
+	input{
+		width: 95%;
+		font-size: 12px;
+		margin-top: 1%;
+		margin-left: 2.5%;
+		margin-right: 2.5%;
+	}
+	select{
+		height: 25px;
+	}
+	input[type='submit']{
+		padding-top: 3%;
+		padding-bottom: 3%;
+		font-size: 18px;
+		border-radius: 3px;
+	}
+}
