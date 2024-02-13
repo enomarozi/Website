@@ -56,7 +56,7 @@
 	</div>
 	<div class='copyright'>
 		<hr>
-		<h4>&#169; | Cari Property Indonesia 2023</h4>
+		<h4>&#169; | Cari Property Indonesia 2024</h4>
 	</div>
 </footer>
 @endsection

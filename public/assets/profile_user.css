@@ -62,3 +62,26 @@ hr{
 	bottom:2px;
 	width:100%;
 }
+@media screen and (max-height: 900px){
+	.container-1{
+		width: 100%;
+		margin:0;
+		height: 650px;
+	}
+	.profile{
+		width: 100%;
+	}
+	.table-profile{
+		width: 90%;
+		margin:0 5% 0 5%;
+        border-collapse: collapse;
+	}
+	.hubungi{
+		margin-top: 5%;
+	}
+	.grid-medsos{
+		margin-top: 5%;
+		margin-left: 15%;
+		margin-right: 15%;
+	}
+}

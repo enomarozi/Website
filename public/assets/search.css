@@ -1,7 +1,7 @@
 .grid-container{
 	width: 100%;
 	display: grid;
-	grid-template-columns: 26% 26% 26%;
+	grid-template-columns: auto auto auto auto;
 	padding-top: 1%;
 }
 .kategori{

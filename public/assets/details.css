@@ -108,3 +108,36 @@ table{
 .profile-show:hover{
 	cursor: pointer;
 }
+@media screen and (max-height: 900px){
+	.label{
+		margin: 10px 0 5px 0;
+		font-size: 25px;
+	}
+	.container{
+		width: 100%;
+		margin:0;
+		padding:0;
+	}
+	.grid-details{
+		display: block;
+	}
+	.prev, .next {
+		top: 60%;
+  	margin-right: 0%;
+	}
+	.details-property{
+		margin-top: 20px;
+	}
+	.grid-label{
+		grid-template-rows: auto auto;
+	}
+	.details{
+		font-size: 22px;
+	}
+	.label-posting{
+		font-size: 13px;
+	}
+	td{
+		font-size: 18px;
+	}
+}
