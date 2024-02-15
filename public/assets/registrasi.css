@@ -84,7 +84,7 @@ input[type='submit']{
 	background-color: #a8a8a8;
 }
 @media screen and (max-height: 900px){
-	.container{
-		width: 50%;
+	*{
+		background-color: red;
 	}
 }

@@ -26,8 +26,7 @@
 }
 .button-head{
 	width: 100%;
-	padding-top: 10%;
-	padding-bottom: 10%;
+	padding: 11% 0 11% 0;
 	color: white;
 	font-size: 20px;
 	border-style: none;
@@ -43,10 +42,10 @@ a:active,a:visited{
 }
 @media screen and (max-height: 900px){
 	.grid-header{
-		grid-template-columns: 50% 0% 50%;
+		grid-template-columns: 40% 0% 60%;
 	}
 	.head-img{
-		width: 80%;
+		width: 100%;
 	}
 	.wa-img{
 		width: 80%;
@@ -56,6 +55,7 @@ a:active,a:visited{
 	}
 	.button-head{
 		font-size: 8px;
+		padding: 17% 0 17% 0;
 	}
 	button:hover,button:active,button:visited{
 		color: white;
