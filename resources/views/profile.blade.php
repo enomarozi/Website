@@ -7,9 +7,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-
-
 </head>
 <body>
 @extends('template')
@@ -86,6 +83,13 @@
 			<div class='mini-width'>
 				@foreach($penjualan as $i)
 				<div class='tampil'>
+					<div class='tampil-grid-bottom' style="display: none;">
+						<a class='a_button' href="{{ route('detail_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Details</a>
+						<div></div>
+						<a class='a_button' href="{{ route('edit_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Edit</a>
+						<div></div>
+						<a class='a_button' href="{{ route('hapus_property', ['id' => $i->id, 'username' => $i->user]) }}">Hapus</a>
+					</div>
 					<p class='kategori'>{{$i->kategori}}</p>
 					<img class='image-list' src="{{ asset('public/profile/'.$i->id_user.'/penjualan/'.$i->frumah)}}" width="450px">
 					<div class='mid-panel-rows panel-right'>
@@ -96,7 +100,11 @@
 						<p class='type'>{{$i->tipe}}</p>
 					</div>
 					<div class='tampil-grid-bottom'>
-						<a class='a_button' href="{{route('details',$i->id)}}">Details</a>
+						<a class='a_button detail' href="{{ route('detail_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Details</a>
+						<div></div>
+						<a class='a_button edit' href="{{ route('edit_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Edit</a>
+						<div></div>
+						<a class='a_button hapus' href="{{ route('hapus_property', ['id' => $i->id, 'username' => $i->user]) }}">Hapus</a>
 					</div>
 				</div>
 				@endforeach
@@ -130,7 +138,14 @@
 			        serverSide: true,
 			        ajax: "{{ route('getData') }}",
 			        columns: [
-			            {data: 'id', name: 'id'},
+			            { 
+			                data: null,
+			                render: function(data, type, row, meta) {
+			                    var startIndex = meta.settings._iDisplayStart;
+			                    var index = meta.row + 1 + startIndex;
+			                    return '<div style="text-align: center;">' + index + '</div>';
+			                }
+			            },
 			            {data: 'kategori', name: 'kategori'},
 				          {	
 				          	data: 'frumah',
@@ -138,7 +153,6 @@
 				            searchable: false,
 				            render: function(data, type, row) 
 				            {
-				                // return '<img src="' + data.frumah + '" alt="Image" class="img-thumbnail" width="50" height="50">';
 				                return '<img class="image-list" src="{{ asset('public/profile/'.Session::get('id').'/penjualan/') }}/' + data + '" width="250px">';
 				            }
 				          },
@@ -152,10 +166,11 @@
 			                orderable: false,
 			                searchable: false,
 			                render: function(data, type, row) {
+			                	  console.log(data);
 			                    return '<div class="action-button">'+
-			                    			 '<a href="/profile/{{$i->username}}/details/'+data.properti+'/'+data.id + '"class="detail">Detail</a>' +
-			                    			 '<a href="/profile/{{$i->username}}/edit/'+data.properti+'/'+ data.id + '" class="edit">Edit</a>' +
-			                           '<a href="/update/' + data.id + '" class="delete">Update</a>'+
+			                    			 '<a href="/profile/'+data.user+'/details/'+data.properti+'/'+data.id + '"class="detail">Detail</a>' +
+			                    			 '<a href="/profile/'+data.user+'/edit/'+data.properti+'/'+ data.id + '" class="edit">Edit</a>' +
+			                           '<a href="/profile/'+data.user+'/hapus/'+ data.id + '" class="delete">Hapus</a>'+
 			                           '</div>';
 			                }
 			            }

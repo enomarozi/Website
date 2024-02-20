@@ -1,9 +1,7 @@
 .container-1{
 	width: 30%;
 	height: 550px;
-	margin-top: 20px;
-	margin-left: 35%;
-	margin-right: 35%;
+	margin: 20px 35% 0 35%;
 	background-color: white;
 	text-align: center;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -19,8 +17,7 @@
 }
 .table-profile{
 	width: 60%;
-	margin-top: 20px;
-	margin-left: 30%;
+	margin: 20px 0 0 30%;
 	padding-bottom: 30px;
 }
 .footer{
@@ -40,10 +37,8 @@
 }
 .grid-medsos{
 	display: grid;
-	margin-top: 1%;
-	margin-left: 40%;
-	margin-right: 40%;
 	grid-template-columns: 25% 25% 25% 25%;
+	margin: 1% 40% 0 40%;
 	justify-items: center;
   	align-items: center;
 }
@@ -65,7 +60,7 @@ hr{
 @media screen and (max-height: 900px){
 	.container-1{
 		width: 100%;
-		margin:0;
+		margin: 0;
 		height: 650px;
 	}
 	.profile{
@@ -80,8 +75,6 @@ hr{
 		margin-top: 5%;
 	}
 	.grid-medsos{
-		margin-top: 5%;
-		margin-left: 15%;
-		margin-right: 15%;
+		margin: 5% 15% 0 15%;
 	}
 }

@@ -5,14 +5,12 @@
 	padding-top: 1%;
 }
 .kategori{
-	padding-top: 1%;
-	padding-bottom: 1%;
+	padding: 1% 0 1% 0;
 	text-transform: uppercase;
 	font-size: 20px;
 }
 .tampil{
-	margin-left: 5%;
-	margin-bottom: 5%;
+	margin: 0 0 5% 5%;
 	text-align: center;
 	border-radius: 5px;
 	background-color: white;
@@ -45,8 +43,7 @@
 	display: grid;
 	grid-template-columns: 50% 50%;
 	align-items: center;
-	padding-bottom: 1%;
-	padding-top: 1%;
+	padding: 1% 0 1% 0;
 }
 
 .tampil-grid-bottom-child{
@@ -64,9 +61,6 @@
 .alamat,.alamat-lengkap{
 	font-size: 80%;
 }
-.harga{
-
-}
 .type{
 	font-size: 90%;
 	color: #8a8686;
@@ -76,8 +70,7 @@
 	color: #8a8686;
 }
 button{
-	padding-top: 5%;
-	padding-bottom: 5%;
+	padding: 5% 0 5% 0;
 	background-color: #2a3a75;
 	border-style: none;
 	font-size: 18px;

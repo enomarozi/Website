@@ -3,10 +3,6 @@
 <head>
 	<title>CariPropertyIndonesia</title>
 	<link rel="stylesheet" href="{{asset('assets/login.css')}}">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-	<link href="https://fonts.cdnfonts.com/css/login" rel="stylesheet">
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 <body>
 	@if(session('loginFailed'))

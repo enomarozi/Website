@@ -206,7 +206,7 @@ class CariPropertyIndonesia extends Controller
         Session::flash('success', 'success');
         return redirect()->route('profile', ['username' => $user->username]);
     }
-    public function details_profile($properti,$user,$id){
+    public function detail_property($properti,$user,$id){
         //dd($properti,$user,$id);      
         $data = penjualan::where('id',$id)->get();
         foreach($data as $i){
@@ -223,12 +223,12 @@ class CariPropertyIndonesia extends Controller
             }
         }
         #dd($data[0]['id_user']);
-        return view('details_profile',['data'=>$data,'foto'=>$foto]);
+        return view('detail_property',['data'=>$data,'foto'=>$foto]);
     }
-    public function edit($properti,$user,$id){
+    public function edit_property($properti,$user,$id){
         //dd($properti,$user,$id);      
         $data = penjualan::where('id',$id)->get();
-        return view('edit',['data'=>$data]);
+        return view('edit_property',['data'=>$data]);
     }
     public function editAction(Request $request,$id){
         $update_jual = penjualan::find($id);
@@ -304,6 +304,12 @@ class CariPropertyIndonesia extends Controller
         return redirect()->route('profile', ['username' => Session::get('username')]);
         
     }
+    public function hapus_property($user,$id){
+        Penjualan::where('id', $id)
+             ->where('user', $user)
+             ->delete();
+        return redirect()->route('profile', ['username' => Session::get('username')]);
+    }
     public function getData(){
         $penjualan = penjualan::where('user',Session::get('username'))->get(); 
         return Datatables::of($penjualan)->make(true);
@@ -364,7 +370,6 @@ class CariPropertyIndonesia extends Controller
         }
         return view('details',['data'=>$data,'foto'=>$foto]);
     }
-
     /////////AJAX/////////
     public function index(Request $request){
         if($request->ajax()){

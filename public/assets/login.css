@@ -15,7 +15,7 @@ form{
 }
 .label{
 	margin-bottom: 5%;
-	font-size: 18px;
+	font-size: 30px;
 	text-shadow: 1px 0px 3px;
 	text-align: center;
 	background: #e3e8e5;
@@ -26,6 +26,7 @@ input{
 	margin: 1% 10% 0 10%;
 	padding: 2% 0 2% 0;
 	border-style: none;
+	outline: none;
 	background-color: #e3e8e5;
 	border-bottom: 1px solid black;
 	font-size: 20px;
