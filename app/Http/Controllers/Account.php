@@ -77,6 +77,12 @@ class Account extends Controller
     public function forgot_password(){
         return view('forgot_password');
     }
+    public function forgot_password_action(Request $request){
+        $users = Users::where('username', $request->username)
+             ->orWhere('email', $request->username)
+             ->get();
+        dd($users);
+    }
     public function setting($username){
         $user = Auth::user();
         $medsos = Medias::where('username',$user->username)->first();

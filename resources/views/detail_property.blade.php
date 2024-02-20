@@ -25,7 +25,6 @@
 					@foreach($foto as $i)
 					<div class="mySlides fade">
 						<img src="{{ asset('public/profile/'.$data[0]['id_user'].'/penjualan/'.$i)}}" style="width:100%;height: 450px;">
-						<div class="text">Caption Text</div>
 					</div>
 					@endforeach
 					<a class="prev" onclick="plusSlides(-1)">❮</a>
@@ -39,12 +38,6 @@
 				</div>
 			</div>
 			<div class='details-property'>
-				@foreach($data as $i)
-				<div class='grid-label'>
-					<h1 class='details'>--- Details ---</h1>
-					<!-- <label class='label-posting'>Diposting Oleh {{$i->nama_lengkap[0]}}, {{$i->created_at->format('d-m-Y')}}</label> -->
-				</div>
-				@endforeach
 				<hr>
 				<br>
 				<table>

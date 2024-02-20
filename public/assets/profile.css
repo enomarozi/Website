@@ -181,9 +181,9 @@ a:hover,a:visited{
 		padding:3%;
 	}
 	.tampil{
-		background-color: #dee0df;
 		margin-bottom: 15px;
 		border-radius: 5px;
+		box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
 	}
 	.kategori{
 		padding-top: 5%;
@@ -214,7 +214,7 @@ a:hover,a:visited{
 	
 	.tampil-grid-bottom{
 		display: grid;
-		grid-template-columns: auto 1% auto 1% auto;
+		grid-template-columns: 3% 30% 2% 30% 2% 30% 3%;
 		text-align: center;
 		font-size: 18px;
 		text-decoration: none;

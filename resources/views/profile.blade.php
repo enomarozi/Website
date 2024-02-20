@@ -100,11 +100,13 @@
 						<p class='type'>{{$i->tipe}}</p>
 					</div>
 					<div class='tampil-grid-bottom'>
+						<div></div>
 						<a class='a_button detail' href="{{ route('detail_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Details</a>
 						<div></div>
 						<a class='a_button edit' href="{{ route('edit_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Edit</a>
 						<div></div>
 						<a class='a_button hapus' href="{{ route('hapus_property', ['id' => $i->id, 'username' => $i->user]) }}">Hapus</a>
+						<div></div>
 					</div>
 				</div>
 				@endforeach

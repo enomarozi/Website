@@ -12,6 +12,7 @@ Route::POST('/loginAction',[Account::class,'loginAction'])->name('loginAction');
 Route::GET('/registrasi',[Account::class,'registrasi'])->name('registrasi');
 Route::POST('/registrasiAction',[Account::class,'registrasiAction'])->name('registrasiAction');
 Route::GET('/forgot_password',[Account::class,'forgot_password'])->name('forgot_password');
+Route::POST('/forgot_password_action',[Account::class,'forgot_password_action'])->name('forgot_password_action');
 Route::GET('/setting/{username}',[Account::class,'setting'])->name('setting')->middleware(('auth'));
 Route::POST('/settingAction',[Account::class,'settingAction'])->name('settingAction')->middleware(('auth'));
 Route::GET('/actionlogout', [Account::class, 'actionlogout'])->name('actionlogout');
@@ -32,6 +33,5 @@ Route::GET('/profile/{username}/{page}',[CariPropertyIndonesia::class,'profilepa
 Route::GET('/search',[CariPropertyIndonesia::class,'search'])->name('search');
 Route::GET('/search/{kategori}/{properti}',[CariPropertyIndonesia::class,'search_head'])->name('search_head');
 Route::GET('/searchKost',[CariPropertyIndonesia::class,'searchKost'])->name('searchKost');
-Route::GET('/details/{id}',[CariPropertyIndonesia::class,'details'])->name('details');	
 
 Route::GET('/getData', [CariPropertyIndonesia::class, 'getData'])->name('getData');

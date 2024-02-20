@@ -282,9 +282,46 @@ table{
 .profile-show{
 	padding: 3%;
 	background-color: #2a3a75;
+	color: white;
 	border-style: none;
 	font-size: 25px;
 }
 .profile-show:hover{
 	cursor: pointer;
+}
+@media screen and (max-height: 900px){
+	.label{
+		margin: 10px 0 5px 0;
+		font-size: 25px;
+	}
+	.container{
+		width: 100%;
+		margin:0;
+		padding:0;
+	}
+	.grid-details{
+		display: block;
+	}
+	.prev, .next {
+		top: 60%;
+  	margin-right: 0%;
+	}
+	.details-property{
+		margin: 20px 0 0 0;
+	}
+	.grid-label{
+		grid-template-rows: auto auto;
+	}
+	.details{
+		font-size: 26px;
+	}
+	.label-posting{
+		font-size: 15px;
+	}
+	td{
+		font-size: 18px;
+	}
+	.profile-show{
+		font-size: 18px;
+	}
 }
