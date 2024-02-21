@@ -38,8 +38,8 @@
 						<p class='create'>{{$i->created_at}}</p>
 					</div>
 					<div class='tampil-grid-bottom-child'>
-						<button class='button-action'><a class='a_button' href="{{route('details',$i->id)}}">Beli</a></button>
-						<button class='button-action'><a class='a_button' href="{{route('details',$i->id)}}">Details</a></button>
+						<button class='button-action'><a class='a_button' href="{{ route('detail_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Beli</a></button>
+						<button class='button-action'><a class='a_button' href="{{ route('detail_property', ['id' => $i->id, 'username' => $i->user, 'properti' => $i->properti]) }}">Details</a></button>
 					</div>
 				</div>
 			</div>

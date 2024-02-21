@@ -16,6 +16,7 @@
 			<div class='select-1'>
 				<select class='alamat1' id='kecamatan' name='kecamatan' required>
 					<option value="" selected disabled hidden>Selected</option>
+					<option value="Semua">Semua</option>
 					<script type="text/javascript">
 						const apiKey = 'a51d53c2-1b8b-5ee2-e2a8-ec160a0c';
 						const kecamatan = `https://api.goapi.io/regional/kecamatan?kota_id=13.71&api_key=${apiKey}`;
@@ -51,26 +52,37 @@
 						    let selectedIndex = this.selectedIndex;
 						    let selectedOption = this.options[selectedIndex];
 						    let optionId = selectedOption.id;
-						    let kelurahan = `https://api.goapi.io/regional/kelurahan?kecamatan_id=${optionId}&api_key=${apiKey}`;
-						    xhr.open('GET', kelurahan, true);
-						    xhr.onreadystatechange = function(){
+						    const select = document.getElementById('kelurahan');
+						    if(selectedOption.value === "Semua"){
 						    	var selectElement = document.getElementById("kelurahan");
 						    	while (selectElement.options.length > 0) {
-								    selectElement.remove(0);
-								}
-								if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
-									const select = document.getElementById('kelurahan');
-									let response = JSON.parse(xhr.responseText);
-									let data = response.data;
-									for(var i=0;i<Object.keys(data).length;i++){
-										var opt = document.createElement('option');
-										opt.value = data[i].name;
-										opt.innerHTML = data[i].name;
-										select.appendChild(opt);
+									    selectElement.remove(0);
 									}
-								}
-							};
-							xhr.send();  
+						    	var opt = document.createElement('option');
+								opt.value = "Semua";
+								opt.innerHTML = "Semua";
+								select.appendChild(opt);
+						    }else{
+							    let kelurahan = `https://api.goapi.io/regional/kelurahan?kecamatan_id=${optionId}&api_key=${apiKey}`;
+							    xhr.open('GET', kelurahan, true);
+							    xhr.onreadystatechange = function(){
+							    	var selectElement = document.getElementById("kelurahan");
+							    	while (selectElement.options.length > 0) {
+									    selectElement.remove(0);
+									}
+									if(xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200){
+										let response = JSON.parse(xhr.responseText);
+										let data = response.data;
+										for(var i=0;i<Object.keys(data).length;i++){
+											var opt = document.createElement('option');
+											opt.value = data[i].name;
+											opt.innerHTML = data[i].name;
+											select.appendChild(opt);
+										}
+									}
+								};
+								xhr.send();  
+							}
 						});						 
 					</script>
 				</select>

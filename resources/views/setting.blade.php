@@ -11,9 +11,9 @@
 <body>
 @extends('template')
 @section('content')  
-<div>
+<div class='container'>
 	<div class='label'>
-		<label>Setting Profile</label>
+		<label>--- Setting Profile ---</label>
 	</div>
 	@if(Session::has('loginSuccess'))
 	<script type="text/javascript">

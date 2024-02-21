@@ -207,7 +207,6 @@ class CariPropertyIndonesia extends Controller
         return redirect()->route('profile', ['username' => $user->username]);
     }
     public function detail_property($properti,$user,$id){
-        //dd($properti,$user,$id);      
         $data = penjualan::where('id',$id)->get();
         foreach($data as $i){
                 $i->nama_lengkap = DB::table("Users")->where('username',$i->user)->pluck('namalengkap');
